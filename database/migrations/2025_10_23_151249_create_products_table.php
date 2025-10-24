@@ -18,8 +18,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug')->unique();
             $table->longText('description')->nullable();
-            $table->decimal('price', 12, 2);
-            $table->decimal('weight', 8, 2)->nullable();
             $table->enum('status', ['draft', 'published', 'archived'])->default('published');
             $table->boolean('is_preorder')->default(false);
             $table->integer('default_stock')->default(0);
